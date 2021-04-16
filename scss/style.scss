@@ -1,0 +1,275 @@
+/// Variaveis referentes as cores principais do projeto
+
+$purple: #A050BE;
+$light-grey: #eaeaeb;
+$dark-grey: #464646;
+$yellow: #FABE50;
+$img-width: 45%;
+
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+
+    &_logo {
+        text-align: center;
+    }
+
+    &_img {
+        max-width: 350px;
+    }
+
+    .menu {
+        &_list{
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid $light-grey;
+            border-bottom: 1px solid $light-grey;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            padding: 20px 0;
+        }
+        
+        &_links {
+            position: relative;
+
+            &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -3px;
+                margin: auto;
+                height: 15px;
+                width: 1px;
+                background-color: $light-grey;
+            }
+        }
+
+        &_link {
+            padding: 0 25px;
+            color: $dark-grey;
+
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    // O trecho de codigo abaixo se refere ao posicionamento do footer na pagina
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &_logo {
+        max-width: 100px;
+    }
+
+    &_txt {
+        margin: auto;
+        font-size: 14px;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &_content {
+        width: 70%;
+        padding: 40px 80px;
+    }
+
+    &_post {
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &_title {
+        text-decoration: none;
+        font-size: 22px;
+        color: $dark_grey;
+        letter-spacing: 1.5;
+        &:hover {
+            color: $purple;
+        }
+    }
+
+    &_subtitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &_date {
+        margin: 0 10px;
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    &_tag {
+        font-size: 14px;
+        padding: 5px 7px;
+        color: $purple;
+        border: 1px solid $purple;
+        margin: 0 10px;
+    }
+
+    &_details {
+        border: 1px solid $light-grey;
+    }
+
+    &_img {
+        width: 100%;
+    }
+
+    &_description {
+        padding: 40px 0 25px;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+
+    &_btn {
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: 1.5;
+        color: $purple;
+        background-color: $yellow;
+        padding: 10px 20px;
+        transition: .3s;
+        &:hover {
+            color: $yellow;
+            background-color: $purple;
+        }
+    }
+
+    &_info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $light-grey;
+        margin-top: 30px;
+    }
+
+    &_author {
+        width: 50%;
+        border-right: 1px solid $light-grey;
+    }
+
+    &_p {
+        font-size: 14px;
+        color: $dark-grey;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &_comments {
+        width: 50%;
+    }
+
+    &_a {
+        text-decoration: none;
+        font-size: 14px;
+        color: $dark-grey;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: $purple;
+        }
+    }
+}
+
+.about {
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto 40px;
+
+    &_title {
+        background-color: $light-grey;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &_h1 {
+        font-size: 22px;
+        color: $dark-grey;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_link {
+            font-size: 12px;
+            text-decoration: none;
+            color: $dark-grey;
+
+            &:hover {
+                text-decoration: underline;
+                color: $purple;
+            }
+        }
+
+        &_img {
+            width: 10px;
+            margin: 8px;
+        }
+    }
+
+    &_img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &_intro {
+        font-size: 16px;
+        color: $dark-grey;
+        font-weight: 100;
+        width: 70%;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &_split {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_img2 {
+        width: $img-width;
+    }
+
+    &_txt {
+        width: calc(100% - #{$img-width});
+    }
+
+    &_p {
+        font-size: 14px;
+        padding: 10px 20px;
+        color: $dark-grey;
+    }
+    
+}
