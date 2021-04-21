@@ -262,8 +262,8 @@
 }
 .about__split {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
 }
 .about__img-description {
